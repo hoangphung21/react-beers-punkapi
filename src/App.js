@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import './App.css';
-
+import DataBeers from './components/DataBeers';
+/*
 function RandomBeers() {
 
   const [name, setName] = useState();
@@ -25,12 +26,13 @@ function RandomBeers() {
     </div>
   )
 }
-
+*/
 function App() {
   return (
     <div className="App">
       <h1>React Beers by Hoang Phung</h1>
-      <RandomBeers />
+      <DataBeers />
+      {/* <RandomBeers />  */}
     </div>
   );
 }
