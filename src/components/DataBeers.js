@@ -4,13 +4,14 @@ import axios from 'axios';
 function DataBeers() {
     const [posts, setPosts] = useState([]);
     const [id, setId] = useState(1);
+    const [idClick, setIdClick] = useState(1);
 
     const handleClick = () => {
-        setId(id)
+        setIdClick(id)
     }
 
     useEffect(() => {
-        axios.get(`https://api.punkapi.com/v2/beers/${id}`)
+        axios.get(`https://api.punkapi.com/v2/beers/${idClick}`)
             .then(res => {
                 console.log(res);
                 setPosts(res.data);
@@ -18,13 +19,13 @@ function DataBeers() {
             .catch(err => {
                 console.log(err);
             });
-    }, [id]);
+    }, [idClick]);
 
     return (
         <div>
             <ul>
                 {
-                    posts.map(post => <li key={post.id}>{post.id}: {post.name}</li>)
+                    posts.map(post => <li key={post.id}>{post.name}</li>)
                 }
             </ul>
             <div>
