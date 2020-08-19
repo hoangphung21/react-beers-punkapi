@@ -23,17 +23,19 @@ function DataBeers() {
 
     return (
         <div>
-            <ul>
+            {/* <ul>
                 {
-                    posts.map(post => <li key={post.id}>{post.name}</li>)
+                    posts.map(posted => <li key={posted.id}>{posted.name}</li>)
                 }
-            </ul>
-            <div>
-                <input type="text" value={id} onChange={e => setId(e.target.value)}></input>
-                <button type="button" onClick={handleClick}>Search</button>
-                <div>{posts.map(post => <li key={post.id}>{post.description}</li>)}</div>
-                <div>{posts.map(post => <img key={post.id} src={post.image_url}></img>)}</div>
-            </div>
+            </ul> */}
+
+
+            <input type="text" value={id} placeholder="Enter ID of the beer." onChange={e => setId(e.target.value)}></input>
+            <button type="button" onClick={handleClick}>Search</button>
+            <div>{posts.map(post => <p key={post.id}>{post.name}</p>)}</div>
+            <div>{posts.map(post => <p key={post.id}>{post.description}</p>)}</div>
+            <div>{posts.map(post => <img key={post.id} src={post.image_url}></img>)}</div>
+
         </div>
 
 

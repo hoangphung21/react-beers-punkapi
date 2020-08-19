@@ -2,6 +2,7 @@ import React from 'react';
 
 import './App.css';
 import DataBeers from './components/DataBeers';
+import BeersList from './components/BeersList';
 /*
 function RandomBeers() {
 
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <h1>React Beers by Hoang Phung</h1>
+      <BeersList />
       <DataBeers />
       {/* <RandomBeers />  */}
     </div>
