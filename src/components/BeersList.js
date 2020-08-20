@@ -16,7 +16,7 @@ function BeersList() {
     }, []);
 
     return (
-        <div>
+        <div className="beer-list">
             <ul>
                 {
                     lists.map(list => <li key={list.id}>{list.id}: {list.name}</li>)

@@ -22,7 +22,7 @@ function DataBeers() {
     }, [idClick]);
 
     return (
-        <div>
+        <div className="beer-data">
             {/* <ul>
                 {
                     posts.map(posted => <li key={posted.id}>{posted.name}</li>)
@@ -31,10 +31,10 @@ function DataBeers() {
 
 
             <input type="text" value={id} placeholder="Enter ID of the beer." onChange={e => setId(e.target.value)}></input>
-            <button type="button" onClick={handleClick}>Search</button>
+            <button disabled={!id} type="button" onClick={handleClick}>Search</button>
             <div>{posts.map(post => <p key={post.id}>{post.name}</p>)}</div>
             <div>{posts.map(post => <p key={post.id}>{post.description}</p>)}</div>
-            <div>{posts.map(post => <img key={post.id} src={post.image_url}></img>)}</div>
+            <div className="beer-image">{posts.map(post => <img key={post.id} src={post.image_url}></img>)}</div>
 
         </div>
 

@@ -31,9 +31,9 @@ function RandomBeers() {
 function App() {
   return (
     <div className="App">
-      <h1>React Beers by Hoang Phung</h1>
-      <BeersList />
-      <DataBeers />
+      {/* <h1>React Beers by Hoang Phung</h1> */}
+      <BeersList className="beer-list" />
+      <DataBeers className="beer-data" />
       {/* <RandomBeers />  */}
     </div>
   );

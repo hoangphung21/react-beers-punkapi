@@ -1,10 +1,22 @@
 .App {
   text-align: center;
+  display: flex;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.beer-list {
+  flex: 2;
+  background-color: #61dafb;
+}
+
+.beer-data {
+  flex: 1;
+  background-color: goldenrod;
+}
+
+img {
+  width: 200px;
+  height: 400px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
